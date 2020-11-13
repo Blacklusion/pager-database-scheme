@@ -1,5 +1,4 @@
 import {Entity, Column, PrimaryColumn} from "typeorm";
-import {ChainSelection} from "../../ChainSelection";
 
 @Entity()
 export class TelegramUser {
