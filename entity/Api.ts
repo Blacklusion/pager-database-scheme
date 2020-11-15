@@ -111,7 +111,7 @@ export class Api {
     wallet_all_checks_ok: boolean
 
     @Column({default: false})
-    bp_json_all_features_ok
+    bp_json_all_features_ok: boolean
 
     @OneToOne(type => History, {eager: true})
     @JoinColumn()
