@@ -70,6 +70,15 @@ export class Organization {
     bpjson_email_ok: boolean;
 
     @Column({default: false})
+    bpjson_github_user_ok: boolean;
+
+    @Column({default: false})
+    bpjson_chain_resources_ok: boolean;
+
+    @Column({default: false})
+    bpjson_other_resources_ok: boolean;
+
+    @Column({default: false})
     bpjson_branding_ok: boolean;
 
     @Column({default: false})
