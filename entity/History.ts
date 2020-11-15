@@ -1,5 +1,8 @@
 import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn} from "typeorm";
 
+/**
+ * Store the validation results of a History validation
+ */
 @Entity()
 export class History {
 

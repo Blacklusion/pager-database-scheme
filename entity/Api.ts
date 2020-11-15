@@ -1,17 +1,10 @@
-import {
-    Entity,
-    PrimaryGeneratedColumn,
-    Column,
-    CreateDateColumn,
-    OneToOne,
-    JoinColumn,
-    ManyToOne,
-    ManyToMany, JoinTable
-} from "typeorm";
-import {Guild} from "./Guild";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, OneToOne, JoinColumn } from "typeorm";
 import {History} from "./History";
-import { Organization } from "./Organization";
 
+/**
+ * Stores the validation results of an Api validation
+ * An Api validation contains a relation to a potential history validation
+ */
 @Entity()
 export class Api {
 
@@ -21,12 +14,6 @@ export class Api {
     @Column({length: 12})
     guild: string;
 
-    /*
-    @Column()
-    organization: Organization;
-
-
-     */
     @CreateDateColumn()
     validation_date: Date;
 

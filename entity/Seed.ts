@@ -1,9 +1,7 @@
-import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne} from "typeorm";
-import {Guild} from "./Guild";
-import { Organization } from "./Organization";
+import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm";
 
 /**
- * DONE
+ * Stores the validation results of an seed / p2p validation
  */
 @Entity()
 export class Seed {

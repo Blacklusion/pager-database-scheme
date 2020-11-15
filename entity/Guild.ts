@@ -1,6 +1,9 @@
-import {Entity, Column, CreateDateColumn, PrimaryColumn, JoinColumn, OneToOne} from "typeorm";
-import {Organization} from "./Organization";
+import {Entity, Column, CreateDateColumn, PrimaryColumn} from "typeorm";
 
+/**
+ * Storing the information about a guild, found on chain
+ * Usually stays unchanged during validation. Changes are only made to a guild, if the information on chain changes
+ */
 @Entity()
 export class Guild {
 
@@ -16,7 +19,6 @@ export class Guild {
     @Column({nullable: true})
     mainnet_url: string;
 
-    // Location is stored as string rather than number to enable trailing zeros
     @Column({nullable: true})
     mainnet_location: number;
 

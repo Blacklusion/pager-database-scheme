@@ -1,5 +1,8 @@
 import {Entity, Column, PrimaryColumn} from "typeorm";
 
+/**
+ * Stores information about a telegram user (username, chatId etc.) and their preferences (e.g. if notifications for Apis are muted or not etc.)
+ */
 @Entity()
 export class TelegramUser {
 

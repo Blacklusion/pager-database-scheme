@@ -1,18 +1,11 @@
-import {
-    Entity,
-    PrimaryGeneratedColumn,
-    Column,
-    CreateDateColumn,
-    OneToOne,
-    JoinColumn,
-    OneToMany,
-    JoinTable, ManyToMany
-} from "typeorm";
-import {Guild} from "./Guild";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, JoinTable, ManyToMany } from "typeorm";
 import {Seed} from "./Seed";
 import {Api} from "./Api";
-import {defaultCipherList} from "constants";
 
+/**
+ * Stores the validation results of an organization validation
+ * An organization validation contains all relations to corresponding Api and Seed validations
+ */
 @Entity()
 export class Organization {
 
