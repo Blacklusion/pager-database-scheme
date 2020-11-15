@@ -107,6 +107,12 @@ export class Api {
     @Column({nullable: true})
     wallet_keys_ms: number;
 
+    @Column({default: false})
+    all_wallet_checks_ok: boolean
+
+    @Column({default: false})
+    bp_json_all_features_ok
+
     @OneToOne(type => History, {eager: true})
     @JoinColumn()
     history_validation: History;
