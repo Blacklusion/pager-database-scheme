@@ -118,9 +118,6 @@ export class History {
     hyperion_health_missing_blocks: number
 
     @Column({default: false})
-    hyperion_health_active_shards_ok: boolean
-
-    @Column({default: false})
     hyperion_transaction_ok: boolean
 
     @Column({nullable: true})
