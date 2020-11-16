@@ -17,6 +17,9 @@ export class Api {
     @CreateDateColumn()
     validation_date: Date;
 
+    @Column()
+    validation_is_mainnet: boolean;
+
     @Column({default: false})
     all_checks_ok: boolean
 
