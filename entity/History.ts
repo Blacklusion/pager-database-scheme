@@ -114,6 +114,9 @@ export class History {
     @Column({default: false})
     hyperion_health_total_indexed_blocks_ok: boolean
 
+    @Column({default: null})
+    hyperion_health_missing_blocks: number
+
     @Column({default: false})
     hyperion_health_active_shards_ok: boolean
 
