@@ -52,6 +52,9 @@ export class History {
     hyperion_all_checks_ok: boolean
 
     @Column({default: false})
+    hyperion_health_found: boolean
+
+    @Column({default: false})
     hyperion_health_version_ok: boolean
 
     @Column({default: false})

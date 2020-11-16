@@ -108,10 +108,10 @@ export class Api {
     wallet_keys_ms: number;
 
     @Column({default: false})
-    wallet_all_checks_ok: boolean
+    wallet_all_checks_ok: boolean;
 
     @Column({default: false})
-    bp_json_all_features_ok: boolean
+    bp_json_all_features_ok: boolean;
 
     @OneToOne(type => History, {eager: true})
     @JoinColumn()
