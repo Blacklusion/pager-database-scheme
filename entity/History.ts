@@ -15,7 +15,7 @@ export class History {
     @CreateDateColumn()
     validation_date: Date;
 
-    @Column()
+    @Column({default: false})
     validation_is_mainnet: boolean;
 
     @Column({default: false})
