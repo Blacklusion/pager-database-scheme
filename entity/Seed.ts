@@ -33,6 +33,9 @@ export class Seed {
     @Column({default: false})
     p2p_connection_possible: boolean;
 
+    @Column({default: null})
+    p2p_connection_possible_message: string
+
     @Column({default: false})
     block_transmission_speed_ok: boolean;
 
