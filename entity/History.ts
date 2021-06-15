@@ -58,5 +58,5 @@ export class History {
     key_accounts_ms: number
 
     @Column({default: null})
-    accounts_message: string
+    key_accounts_message: string
 }
