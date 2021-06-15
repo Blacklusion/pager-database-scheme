@@ -21,7 +21,10 @@ export class Guild {
 
     @Column({nullable: true})
     url: string;
-    
+
+    @Column({nullable: true})
+    url_logo_256: string;
+
     @Column({nullable: true})
     last_validation_id: number;
 }
