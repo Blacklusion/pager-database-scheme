@@ -1,10 +1,10 @@
 import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn} from "typeorm";
 
 /**
- * Store the validation results of a Hyperion validation
+ * Store the validation results of a NodeHyperion validation
  */
 @Entity()
-export class Hyperion {
+export class NodeHyperion {
   @PrimaryGeneratedColumn()
   id: number;
 

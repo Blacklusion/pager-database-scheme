@@ -1,12 +1,12 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, JoinTable, ManyToMany } from "typeorm";
 import {NodeSeed} from "./NodeSeed";
-import {Api} from "./Api";
-import { Atomic } from "./Atomic";
-import { Hyperion } from "./Hyperion";
+import {NodeApi} from "./NodeApi";
+import { NodeAtomic } from "./NodeAtomic";
+import { NodeHyperion } from "./NodeHyperion";
 
 /**
  * Stores the validation results of an organization validation
- * An organization validation contains all relations to corresponding Api and Seed validations
+ * An organization validation contains all relations to corresponding NodeApi and Seed validations
  */
 @Entity()
 export class Validation {
@@ -138,19 +138,19 @@ export class Validation {
     @JoinTable()
     nodes_seed: NodeSeed[];
 
-    @ManyToMany(type => Api, {eager: true})
+    @ManyToMany(type => NodeApi, {eager: true})
     @JoinTable()
-    nodes_api: Api[];
+    nodes_api: NodeApi[];
 
     @ManyToMany(type => History, {eager: true})
     @JoinTable()
     nodes_history: History[];
 
-    @ManyToMany(type => Hyperion, {eager: true})
+    @ManyToMany(type => NodeHyperion, {eager: true})
     @JoinTable()
-    nodes_hyperion: Hyperion[];
+    nodes_hyperion: NodeHyperion[];
 
-    @ManyToMany(type => Atomic, {eager: true})
+    @ManyToMany(type => NodeAtomic, {eager: true})
     @JoinTable()
-    nodes_atomic: Atomic[];
+    nodes_atomic: NodeAtomic[];
 }
