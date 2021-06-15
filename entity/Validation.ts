@@ -3,6 +3,7 @@ import {NodeSeed} from "./NodeSeed";
 import {NodeApi} from "./NodeApi";
 import { NodeAtomic } from "./NodeAtomic";
 import { NodeHyperion } from "./NodeHyperion";
+import { NodeHistory } from "./NodeHistory";
 
 /**
  * Stores the validation results of an organization validation
@@ -18,7 +19,7 @@ export class Validation {
     guild: String;
 
     @Column()
-    validation_is_mainnet: boolean;
+    chain_id: String;
 
     @CreateDateColumn()
     validation_date: Date;
@@ -142,9 +143,9 @@ export class Validation {
     @JoinTable()
     nodes_api: NodeApi[];
 
-    @ManyToMany(type => History, {eager: true})
+    @ManyToMany(type => NodeHistory, {eager: true})
     @JoinTable()
-    nodes_history: History[];
+    nodes_history: NodeHistory[];
 
     @ManyToMany(type => NodeHyperion, {eager: true})
     @JoinTable()

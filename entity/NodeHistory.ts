@@ -15,14 +15,16 @@ export class NodeHistory {
     @CreateDateColumn()
     validation_date: Date;
 
-    @Column({default: false})
-    validation_is_mainnet: boolean;
+    @Column()
+    chain_id: String;
 
     @Column({default: false})
     all_checks_ok: boolean
 
     @Column()
     api_endpoint: string;
+
+    //todo: add endpoint url check
 
     @Column({default: false})
     is_ssl: boolean

@@ -18,12 +18,15 @@ export class NodeSeed {
     @Column()
     p2p_endpoint: string;
 
+    //todo: add endpoint url check
+
     @Column()
-    validation_is_mainnet: boolean;
+    chain_id: String;
 
     @Column({default: false})
     location_ok: boolean;
 
+    // todo: Adjust the order of the columns to be the same with the other files
     @Column({default: false})
     all_checks_ok: boolean;
 
