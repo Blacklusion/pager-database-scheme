@@ -54,36 +54,6 @@ export class Hyperion {
   health_query_time_message: string
 
   @Column({default: false})
-  health_features_tables_proposals_on: boolean
-
-  @Column({default: false})
-  health_features_tables_accounts_on: boolean
-
-  @Column({default: false})
-  health_features_tables_voters_on: boolean
-
-  @Column({default: false})
-  health_features_index_deltas_on: boolean
-
-  @Column({default: false})
-  health_features_index_transfer_memo_on: boolean
-
-  @Column({default: false})
-  health_features_index_all_deltas_on: boolean
-
-  @Column({default: false})
-  health_features_index_failed_trx_off: boolean
-
-  @Column({default: false})
-  health_features_index_deferred_trx_off: boolean
-
-  @Column({default: false})
-  health_features_resource_limits_off: boolean
-
-  @Column({default: false})
-  health_features_resource_usage_off: boolean
-
-  @Column({default: false})
   health_all_features_ok: boolean
 
   @Column({default: null})
