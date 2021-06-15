@@ -1,12 +1,12 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, OneToOne, JoinColumn } from "typeorm";
-import {History} from "./History";
+import {NodeHistory} from "./NodeHistory";
 
 /**
- * Stores the validation results of an Api validation
- * An Api validation contains a relation to a potential history validation
+ * Stores the validation results of an NodeApi validation
+ * An NodeApi validation contains a relation to a potential history validation
  */
 @Entity()
-export class Api {
+export class NodeApi {
 
     @PrimaryGeneratedColumn()
     id: number;
@@ -156,7 +156,7 @@ export class Api {
     bp_json_all_features_message: string
 
 
-    @OneToOne(type => History, {eager: true})
+    @OneToOne(type => NodeHistory, {eager: true})
     @JoinColumn()
-    history_validation: History;
+    history_validation: NodeHistory;
 }
