@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, JoinTable, ManyToMany } from "typeorm";
-import {Seed} from "./Seed";
+import {NodeSeed} from "./NodeSeed";
 import {Api} from "./Api";
 import { Atomic } from "./Atomic";
 import { Hyperion } from "./Hyperion";
@@ -134,9 +134,9 @@ export class Validation {
     @Column({default: false})
     nodes_producer_found: boolean;
 
-    @ManyToMany(type => Seed, {eager: true})
+    @ManyToMany(type => NodeSeed, {eager: true})
     @JoinTable()
-    nodes_seed: Seed[];
+    nodes_seed: NodeSeed[];
 
     @ManyToMany(type => Api, {eager: true})
     @JoinTable()

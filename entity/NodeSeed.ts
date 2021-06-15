@@ -4,7 +4,7 @@ import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm
  * Stores the validation results of an seed / p2p validation
  */
 @Entity()
-export class Seed {
+export class NodeSeed {
 
     @PrimaryGeneratedColumn()
     id: number;
