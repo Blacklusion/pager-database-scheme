@@ -10,30 +10,18 @@ export class Guild {
     @PrimaryColumn({unique: true, length: 12})
     name: string;
 
+    @Column()
+    chain_id: String;
+
     @CreateDateColumn()
     tracked_since: Date;
 
-    @Column({default: false})
-    isMainnet: boolean;
+    @Column({nullable: true})
+    location: number;
 
     @Column({nullable: true})
-    mainnet_url: string;
-
+    url: string;
+    
     @Column({nullable: true})
-    mainnet_location: number;
-
-    @Column({nullable: true})
-    mainnet_last_validation_id: number;
-
-    @Column({default: false})
-    isTestnet: boolean;
-
-    @Column({nullable: true})
-    testnet_url: string;
-
-    @Column({nullable: true})
-    testnet_location: number;
-
-    @Column("int", {nullable: true})
-    testnet_last_validation_id: number;
+    last_validation_id: number;
 }
