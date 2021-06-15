@@ -9,7 +9,7 @@ import { Hyperion } from "./Hyperion";
  * An organization validation contains all relations to corresponding Api and Seed validations
  */
 @Entity()
-export class Organization {
+export class Validation {
 
     @PrimaryGeneratedColumn()
     id: number;
