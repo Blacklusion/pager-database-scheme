@@ -2,6 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, JoinTable, Ma
 import {Seed} from "./Seed";
 import {Api} from "./Api";
 import { Atomic } from "./Atomic";
+import { Hyperion } from "./Hyperion";
 
 /**
  * Stores the validation results of an organization validation
@@ -144,6 +145,10 @@ export class Organization {
     @ManyToMany(type => History, {eager: true})
     @JoinTable()
     nodes_history: History[];
+
+    @ManyToMany(type => Hyperion, {eager: true})
+    @JoinTable()
+    nodes_hyperion: Hyperion[];
 
     @ManyToMany(type => Atomic, {eager: true})
     @JoinTable()
